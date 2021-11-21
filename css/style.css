@@ -41,7 +41,7 @@ h2 {
 
 .ad-container {
     display: grid;
-    grid-template-columns: repeat(2, 340px);
+    grid-template-columns: repeat(2, 330px);
     grid-template-areas:
         'ad-descr ad-descr'
         'ad-price ad-knowh';
@@ -115,7 +115,9 @@ h2 {
 
 .ad-price a {
     display: block;
-    padding: 1.5rem 9.2rem;
+    padding: 1.5rem 0rem;
+
+    text-align: center;
 
     text-decoration: none;
     font-weight: 700;
@@ -142,4 +144,37 @@ h2 {
     line-height: 2rem;
     list-style: none;
     opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+    body {
+        height: auto;
+    }
+
+    .ad {
+        padding: 2.5rem;
+    }
+
+    .ad-container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas:
+            'ad-descr'
+            'ad-price'
+            'ad-knowh';
+        margin: 3rem;
+    }
+
+    .ad-price {
+        border-radius: 0rem;
+    }
+
+    .ad-price a {
+        max-width: 300px;
+    }
+
+    .ad-know-how {
+        border-bottom-left-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem;
+    }
 }
